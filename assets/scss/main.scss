@@ -32,6 +32,10 @@ body {
     .auLadder {
         min-height: 100vh;
     }
+    h1 {
+        font-family: $secondaryFont;
+        font-weight: 700;
+    }
 }
 
 header {
@@ -44,17 +48,25 @@ header {
             font-weight: 400;
             padding: 0px 5px 0px 8px;
             color: $white;
-            border: 1px solid #e2e2e2;
-            background: #212529;
+            background: $black;
             border-radius: 2px;
         }
     }
 }
 
-.shadow {
-    -webkit-box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.25);
-    -moz-box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.25);
-    box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.25);
+.brandBg {
+    background: $black !important;
+}
+
+.auSh {
+    transition: all ease 0.3s;
+}
+
+.fade-in {
+    transition: all ease 0.3s;
+    -webkit-box-shadow: 0px 5px 30px -15px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 5px 30px -15px rgba(0,0,0,0.4);
+    box-shadow: 0px 5px 30px -15px rgba(0,0,0,0.4);
 }
 
 .auSideNav {
@@ -220,5 +232,49 @@ main {
             min-height: 100%;
             object-fit: cover;
         }
+        span {
+            font-weight: 500;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    main {
+        margin: auto !important;
+        h1 {
+            font-size: 72px !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    main {
+        img {
+            width: 100% !important;
+            height: auto !important;
+            min-height: auto !important;
+        }
+        h1 {
+            font-size: 40px !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) {
+    main {
+        margin-top: 3em !important;
+        h1 {
+            font-size: 50px !important;
+        }
+    }
+    img {
+        margin-top: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    main {
+        margin-top: -3em;
     }
 }
