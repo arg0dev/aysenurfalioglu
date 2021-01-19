@@ -28,7 +28,7 @@ function visited() {
         fixed.classList.add('brandBg');
     }, 400);
     auSideNav.style.opacity = "1";
-    auSideNav.style.width = "430px";
+    auSideNav.style.left = "0";
 }
 
 function closeSideNav() {

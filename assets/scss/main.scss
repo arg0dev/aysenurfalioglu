@@ -6,6 +6,7 @@ $white: #fff;
 $black: #000;
 $sideNav: #0a0a0a46;
 $border: #1a1a1a;
+$tableBorder: #d3d3d4;
 $facebook: #4267B2;
 $pinterest: #E60023;
 $dribbble: #ea4c89;
@@ -55,7 +56,7 @@ header {
 }
 
 .brandBg {
-    background: $black !important;
+    opacity: 0 !important;
 }
 
 .auSh {
@@ -71,20 +72,37 @@ header {
 
 .auSideNav {
     height: 100%;
-    width: 0px; /* 430px */
+    width: 430px; /* 430px */
     max-width: 100%;
     opacity: 0;
     position: fixed;
     z-index: 9999;
     top: 0;
-    left: 0;
+    left: -100%;
     background-color: $black;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.7s all ease-in-out;
     padding-top: 18px;
     -webkit-box-shadow: 3px 0px 35px -20px rgba(0,0,0,0.75);
     -moz-box-shadow: 3px 0px 35px -20px rgba(0,0,0,0.75);
     box-shadow: 3px 0px 35px -20px rgba(0,0,0,0.75);
+    h2 {
+        font-family: $secondaryFont;
+        padding: 8px 8px 16px 5px;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: $white !important;
+        line-height: 0.5;
+    }
+    p {
+        color: $white;
+        opacity: 0.5;
+    }
+    hr {
+        width: 15%;
+        border-bottom: solid 1px $white;
+        opacity: 0.5;
+    }
     a {
         padding: 8px 8px 16px 5px;
         text-decoration: none;
@@ -214,7 +232,6 @@ header {
 
 main {
     .sectionOne {
-        top: 0;
         h1 {
             font-family: $secondaryFont;
             font-weight: 700;
@@ -234,6 +251,141 @@ main {
         }
         span {
             font-weight: 500;
+            transform: rotate(90deg) !important;
+            transform: translate(0px, 0px);
+            position: absolute;
+            margin-top: 3em;
+            margin-left: -35px;
+            padding-left: 0;
+            i {
+                margin-top: 0.30em !important;
+                position: absolute;
+            }
+        }
+    }
+    .sectionTwo {
+        margin-top: 10em;
+        margin-bottom: 5em;
+        img {
+            min-height: 75vh;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            -webkit-box-shadow: 0px 0px 74px -60px rgba(0,0,0,1);
+            -moz-box-shadow: 0px 0px 74px -60px rgba(0,0,0,1);
+            box-shadow: 0px 0px 74px -60px rgba(0,0,0,1);
+        }
+        .recT {
+            border: solid 1px $tableBorder !important;
+            min-height: 75vh;
+            height: 100%;
+            width: 100%;
+            width: 85%;
+            position: absolute;
+            z-index: -999;
+            top: 25px;
+            right: -10px;
+        }
+        .recTB {
+            background: $black;
+            height: 30px;
+            width: 150px;
+            position: absolute;
+            z-index: 1;
+            top: 97.3%;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%)
+        }
+        .title {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            margin-right: -1em !important;
+            #num {
+                opacity: 0.2;
+                font-size: 70px;
+            }
+            h1 {
+                font-family: $secondaryFont;
+                font-size: 50px;
+                line-height: 0.25;
+            }
+        }
+        p {
+            margin-top: 2em;
+            text-align: justify;
+            opacity: 0.8;
+        }
+    }
+
+    .sectionThree {
+        margin-top: 10em;
+        margin-bottom: 5em;
+        img {
+            min-height: 75vh;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            -webkit-box-shadow: 0px 0px 74px -60px rgba(0,0,0,1);
+            -moz-box-shadow: 0px 0px 74px -60px rgba(0,0,0,1);
+            box-shadow: 0px 0px 74px -60px rgba(0,0,0,1);
+        }
+        .recTB {
+            background: $black;
+            height: 150px;
+            width: 30px;
+            position: absolute;
+            z-index: 1;
+            top: 20vh;
+            right: -15px;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%)
+        }
+        .title {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            #num {
+                opacity: 0.2;
+                font-size: 70px;
+            }
+            h1 {
+                font-family: $secondaryFont;
+                font-size: 50px;
+                line-height: 0.25;
+            }
+        }
+        p {
+            margin-top: 2em;
+            text-align: justify;
+            opacity: 0.8;
+        }
+            a {
+                color: $black;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: none !important;
+                }
+        }
+        .textAreaBox {
+            h3 {
+                background: $white;
+                position: relative;
+                max-width: 220px;
+                font-size: 25px;
+                font-weight: 700;
+                text-align: center;
+                margin-left: 1em;
+                z-index: 3;
+            }
+            .taBorder {
+                border: solid 1px $tableBorder;
+                margin-top: -1.5em;
+                p {
+                    margin: 0;
+                    padding: 2em;
+                }
+            }
         }
     }
 }
@@ -242,21 +394,100 @@ main {
 @media only screen and (min-width: 768px) {
     main {
         margin: auto !important;
-        h1 {
-            font-size: 72px !important;
-        }
     }
 }
 
 @media only screen and (max-width: 767px) {
     main {
-        img {
-            width: 100% !important;
-            height: auto !important;
-            min-height: auto !important;
+        .sectionOne {
+            img {
+                width: 100% !important;
+                height: 50vh;
+                min-height: auto !important;
+                margin-top: 1em;
+            }
+            h1 {
+                font-size: 40px !important;
+            }
+            p {
+                opacity: 0.8;
+            }
+            span {
+                font-weight: 500;
+                transform: rotate(90deg) !important;
+                transform: translate(0px, 0px);
+                position: relative !important;
+                margin: auto !important;
+                i {
+                    margin-top: 0.30em !important;
+                    position: relative !important;
+                    transform: rotate(90deg) !important;
+                }
+            }
         }
-        h1 {
-            font-size: 40px !important;
+        .sectionTwo {
+            margin-top: 2em !important;
+            img {
+                height: 50vh !important;
+            }
+            .recT {
+                display: none !important;
+            }
+            .recTB {
+                top: 73vh !important;
+            }
+            .title {
+                writing-mode: initial !important;
+                text-orientation: initial !important;
+                margin-right: auto !important;
+                #num {
+                    opacity: 0.2;
+                    font-size: 40px !important;
+                }
+                h1 {
+                    font-family: $secondaryFont;
+                    font-size: 30px !important;
+                    line-height: 0.75;
+                }
+            }
+        }
+    }
+    .sectionThree {
+        .title {
+            transform: rotate(0deg) !important;
+            writing-mode: inherit !important;
+            text-orientation: inherit !important;
+            #num {
+                opacity: 0.2;
+                font-size: 40px !important;
+            }
+            h1 {
+                font-family: $secondaryFont;
+                font-size: 30px !important;
+                line-height: 0.75 !important;
+            }
+        }
+        .recTB {
+            background: $black;
+            height: 30px !important;
+            width: 150px !important;
+            position: absolute;
+            z-index: 1;
+            top: initial !important;
+            bottom: -15px !important;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%)
+        }
+        #mobMore {
+            border: solid 1px $black;
+            padding: 1em;
+            transition: 0.5s ease all;
+            font-weight: 700;
+            &:hover {
+                background: $black;
+                color: $white;
+            }
         }
     }
 }
@@ -270,11 +501,5 @@ main {
     }
     img {
         margin-top: 0 !important;
-    }
-}
-
-@media only screen and (max-width: 414px) {
-    main {
-        margin-top: -3em;
     }
 }

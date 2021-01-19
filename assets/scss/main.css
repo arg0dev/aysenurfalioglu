@@ -43,7 +43,7 @@ header .navbar .navbar-brand {
 }
 
 .brandBg {
-  background: #000 !important;
+  opacity: 0 !important;
 }
 
 .auSh {
@@ -60,21 +60,41 @@ header .navbar .navbar-brand {
 
 .auSideNav {
   height: 100%;
-  width: 0px;
+  width: 430px;
   /* 430px */
   max-width: 100%;
   opacity: 0;
   position: fixed;
   z-index: 9999;
   top: 0;
-  left: 0;
+  left: -100%;
   background-color: #000;
   overflow-x: hidden;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.7s all ease-in-out;
+  transition: 0.7s all ease-in-out;
   padding-top: 18px;
   -webkit-box-shadow: 3px 0px 35px -20px rgba(0, 0, 0, 0.75);
   box-shadow: 3px 0px 35px -20px rgba(0, 0, 0, 0.75);
+}
+
+.auSideNav h2 {
+  font-family: "Ivy Mode";
+  padding: 8px 8px 16px 5px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #fff !important;
+  line-height: 0.5;
+}
+
+.auSideNav p {
+  color: #fff;
+  opacity: 0.5;
+}
+
+.auSideNav hr {
+  width: 15%;
+  border-bottom: solid 1px #fff;
+  opacity: 0.5;
 }
 
 .auSideNav a {
@@ -205,10 +225,6 @@ header .navbar .navbar-brand {
   overflow: hidden !important;
 }
 
-main .sectionOne {
-  top: 0;
-}
-
 main .sectionOne h1 {
   font-family: "Ivy Mode";
   font-weight: 700;
@@ -232,25 +248,269 @@ main .sectionOne img {
 
 main .sectionOne span {
   font-weight: 500;
+  -webkit-transform: rotate(90deg) !important;
+          transform: rotate(90deg) !important;
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  position: absolute;
+  margin-top: 3em;
+  margin-left: -35px;
+  padding-left: 0;
+}
+
+main .sectionOne span i {
+  margin-top: 0.30em !important;
+  position: absolute;
+}
+
+main .sectionTwo {
+  margin-top: 10em;
+  margin-bottom: 5em;
+}
+
+main .sectionTwo img {
+  min-height: 75vh;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 0px 0px 74px -60px black;
+  box-shadow: 0px 0px 74px -60px black;
+}
+
+main .sectionTwo .recT {
+  border: solid 1px #d3d3d4 !important;
+  min-height: 75vh;
+  height: 100%;
+  width: 100%;
+  width: 85%;
+  position: absolute;
+  z-index: -999;
+  top: 25px;
+  right: -10px;
+}
+
+main .sectionTwo .recTB {
+  background: #000;
+  height: 30px;
+  width: 150px;
+  position: absolute;
+  z-index: 1;
+  top: 97.3%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+main .sectionTwo .title {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: mixed;
+  margin-right: -1em !important;
+}
+
+main .sectionTwo .title #num {
+  opacity: 0.2;
+  font-size: 70px;
+}
+
+main .sectionTwo .title h1 {
+  font-family: "Ivy Mode";
+  font-size: 50px;
+  line-height: 0.25;
+}
+
+main .sectionTwo p {
+  margin-top: 2em;
+  text-align: justify;
+  opacity: 0.8;
+}
+
+main .sectionThree {
+  margin-top: 10em;
+  margin-bottom: 5em;
+}
+
+main .sectionThree img {
+  min-height: 75vh;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 0px 0px 74px -60px black;
+  box-shadow: 0px 0px 74px -60px black;
+}
+
+main .sectionThree .recTB {
+  background: #000;
+  height: 150px;
+  width: 30px;
+  position: absolute;
+  z-index: 1;
+  top: 20vh;
+  right: -15px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+main .sectionThree .title {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: mixed;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+main .sectionThree .title #num {
+  opacity: 0.2;
+  font-size: 70px;
+}
+
+main .sectionThree .title h1 {
+  font-family: "Ivy Mode";
+  font-size: 50px;
+  line-height: 0.25;
+}
+
+main .sectionThree p {
+  margin-top: 2em;
+  text-align: justify;
+  opacity: 0.8;
+}
+
+main .sectionThree a {
+  color: #000;
+  text-decoration: none;
+}
+
+main .sectionThree a:hover {
+  text-decoration: none !important;
+}
+
+main .sectionThree .textAreaBox h3 {
+  background: #fff;
+  position: relative;
+  max-width: 220px;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+  margin-left: 1em;
+  z-index: 3;
+}
+
+main .sectionThree .textAreaBox .taBorder {
+  border: solid 1px #d3d3d4;
+  margin-top: -1.5em;
+}
+
+main .sectionThree .textAreaBox .taBorder p {
+  margin: 0;
+  padding: 2em;
 }
 
 @media only screen and (min-width: 768px) {
   main {
     margin: auto !important;
   }
-  main h1 {
-    font-size: 72px !important;
-  }
 }
 
 @media only screen and (max-width: 767px) {
-  main img {
+  main .sectionOne img {
     width: 100% !important;
-    height: auto !important;
+    height: 50vh;
     min-height: auto !important;
+    margin-top: 1em;
   }
-  main h1 {
+  main .sectionOne h1 {
     font-size: 40px !important;
+  }
+  main .sectionOne p {
+    opacity: 0.8;
+  }
+  main .sectionOne span {
+    font-weight: 500;
+    -webkit-transform: rotate(90deg) !important;
+            transform: rotate(90deg) !important;
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+    position: relative !important;
+    margin: auto !important;
+  }
+  main .sectionOne span i {
+    margin-top: 0.30em !important;
+    position: relative !important;
+    -webkit-transform: rotate(90deg) !important;
+            transform: rotate(90deg) !important;
+  }
+  main .sectionTwo {
+    margin-top: 2em !important;
+  }
+  main .sectionTwo img {
+    height: 50vh !important;
+  }
+  main .sectionTwo .recT {
+    display: none !important;
+  }
+  main .sectionTwo .recTB {
+    top: 73vh !important;
+  }
+  main .sectionTwo .title {
+    -webkit-writing-mode: initial !important;
+        -ms-writing-mode: initial !important;
+            writing-mode: initial !important;
+    text-orientation: initial !important;
+    margin-right: auto !important;
+  }
+  main .sectionTwo .title #num {
+    opacity: 0.2;
+    font-size: 40px !important;
+  }
+  main .sectionTwo .title h1 {
+    font-family: "Ivy Mode";
+    font-size: 30px !important;
+    line-height: 0.75;
+  }
+  .sectionThree .title {
+    -webkit-transform: rotate(0deg) !important;
+            transform: rotate(0deg) !important;
+    -webkit-writing-mode: inherit !important;
+        -ms-writing-mode: inherit !important;
+            writing-mode: inherit !important;
+    text-orientation: inherit !important;
+  }
+  .sectionThree .title #num {
+    opacity: 0.2;
+    font-size: 40px !important;
+  }
+  .sectionThree .title h1 {
+    font-family: "Ivy Mode";
+    font-size: 30px !important;
+    line-height: 0.75 !important;
+  }
+  .sectionThree .recTB {
+    background: #000;
+    height: 30px !important;
+    width: 150px !important;
+    position: absolute;
+    z-index: 1;
+    top: initial !important;
+    bottom: -15px !important;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .sectionThree #mobMore {
+    border: solid 1px #000;
+    padding: 1em;
+    -webkit-transition: 0.5s ease all;
+    transition: 0.5s ease all;
+    font-weight: 700;
+  }
+  .sectionThree #mobMore:hover {
+    background: #000;
+    color: #fff;
   }
 }
 
@@ -263,12 +523,6 @@ main .sectionOne span {
   }
   img {
     margin-top: 0 !important;
-  }
-}
-
-@media only screen and (max-width: 414px) {
-  main {
-    margin-top: -3em;
   }
 }
 /*# sourceMappingURL=main.css.map */
