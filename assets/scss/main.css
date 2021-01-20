@@ -312,7 +312,7 @@ main .sectionTwo .title {
 
 main .sectionTwo .title #num {
   opacity: 0.2;
-  font-size: 70px;
+  font-size: 60px;
 }
 
 main .sectionTwo .title h1 {
@@ -365,7 +365,7 @@ main .sectionThree .title {
 
 main .sectionThree .title #num {
   opacity: 0.2;
-  font-size: 70px;
+  font-size: 60px;
 }
 
 main .sectionThree .title h1 {
@@ -408,6 +408,71 @@ main .sectionThree .textAreaBox .taBorder {
 main .sectionThree .textAreaBox .taBorder p {
   margin: 0;
   padding: 2em;
+}
+
+main .sectionFour {
+  margin-top: 10em;
+  background: #F8F8F8;
+}
+
+main .sectionFour .auR1 {
+  position: relative;
+  margin-top: -15em;
+  padding-bottom: 3em;
+}
+
+main .sectionFour .auR1 .workNameArea {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+main .sectionFour .auR2 {
+  padding-top: 10em;
+}
+
+main .sectionFour .auR3 {
+  padding-bottom: 3em;
+}
+
+main .sectionFour .auR3 a {
+  color: #000;
+  text-decoration: none !important;
+}
+
+main .sectionFour .auR3 a i {
+  font-size: 25px;
+}
+
+main .sectionFour img {
+  min-height: 75vh;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 0px 0px 74px -60px black;
+  box-shadow: 0px 0px 74px -60px black;
+}
+
+main .sectionFour .title {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: mixed;
+  margin-right: -1em !important;
+}
+
+main .sectionFour .title #num {
+  opacity: 0.2;
+  font-size: 60px;
+}
+
+main .sectionFour .title h1 {
+  font-family: "Ivy Mode";
+  font-size: 50px;
+  line-height: 0.25;
 }
 
 @media only screen and (min-width: 768px) {
@@ -511,6 +576,46 @@ main .sectionThree .textAreaBox .taBorder p {
   .sectionThree #mobMore:hover {
     background: #000;
     color: #fff;
+  }
+  .sectionFour {
+    margin: auto !important;
+    padding-top: 1em;
+  }
+  .sectionFour .auR1 {
+    padding-top: 3em !important;
+    margin: auto !important;
+    padding-top: 15em !important;
+  }
+  .sectionFour .auR1 .workNameArea {
+    position: absolute !important;
+    margin: auto !important;
+    top: -180px !important;
+    left: 0 !important;
+    -webkit-transform: inherit !important;
+    transform: inherit !important;
+    text-align: center;
+  }
+  .sectionFour .auR2 {
+    padding: inherit !important;
+  }
+  .sectionFour .auR2 .title {
+    -webkit-writing-mode: inherit !important;
+        -ms-writing-mode: inherit !important;
+            writing-mode: inherit !important;
+    text-orientation: inherit !important;
+    margin: auto !important;
+  }
+  .sectionFour .auR2 .title #num {
+    opacity: 0.2;
+    font-size: 40px !important;
+  }
+  .sectionFour h1 {
+    font-family: "Ivy Mode";
+    font-size: 30px !important;
+    line-height: 0.75 !important;
+  }
+  .sectionFour .auR3 {
+    margin: auto !important;
   }
 }
 

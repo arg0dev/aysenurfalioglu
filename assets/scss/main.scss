@@ -6,6 +6,7 @@ $white: #fff;
 $black: #000;
 $sideNav: #0a0a0a46;
 $border: #1a1a1a;
+$cream: #F8F8F8;
 $tableBorder: #d3d3d4;
 $facebook: #4267B2;
 $pinterest: #E60023;
@@ -303,7 +304,7 @@ main {
             margin-right: -1em !important;
             #num {
                 opacity: 0.2;
-                font-size: 70px;
+                font-size: 60px;
             }
             h1 {
                 font-family: $secondaryFont;
@@ -347,7 +348,7 @@ main {
             transform: rotate(180deg);
             #num {
                 opacity: 0.2;
-                font-size: 70px;
+                font-size: 60px;
             }
             h1 {
                 font-family: $secondaryFont;
@@ -388,6 +389,58 @@ main {
             }
         }
     }
+        .sectionFour {
+            margin-top: 10em;
+            background: $cream;
+            .auR1 {
+                position: relative;
+                margin-top: -15em;
+                padding-bottom: 3em;
+                .workNameArea {
+                    position: absolute;
+                    top: 50%;
+                    left: 10%;
+                    -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%)
+                }
+            }
+            .auR2 {
+                padding-top: 10em;
+            }
+            .auR3 {
+                padding-bottom: 3em;
+                a {
+                    color: $black;
+                    text-decoration: none !important;
+                    i {
+                        font-size: 25px;
+                    }
+                }
+            }
+            img {
+                min-height: 75vh;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                -webkit-box-shadow: 0px 0px 74px -60px rgba(0,0,0,1);
+                -moz-box-shadow: 0px 0px 74px -60px rgba(0,0,0,1);
+                box-shadow: 0px 0px 74px -60px rgba(0,0,0,1);
+            }
+            .title {
+                writing-mode: vertical-rl;
+                text-orientation: mixed;
+                margin-right: -1em !important;
+                #num {
+                    opacity: 0.2;
+                    font-size: 60px;
+                }
+                h1 {
+                    font-family: $secondaryFont;
+                    font-size: 50px;
+                    line-height: 0.25;
+                }
+            }
+        }
 }
 
 
@@ -488,6 +541,45 @@ main {
                 background: $black;
                 color: $white;
             }
+        }
+    }
+    .sectionFour {
+        margin: auto !important;
+        padding-top: 1em;
+        .auR1 {
+            padding-top: 3em !important;
+            margin: auto !important;
+            padding-top: 15em !important;
+            .workNameArea {
+                position: absolute !important;
+                margin: auto !important;
+                top: -180px !important;
+                left: 0 !important;
+                -webkit-transform: inherit !important;
+                transform: inherit !important;
+                text-align: center;
+            }
+
+        }
+        .auR2 {
+            padding: inherit !important;
+            .title {
+                writing-mode: inherit !important;
+                text-orientation: inherit !important;
+                margin: auto !important;
+                #num {
+                    opacity: 0.2;
+                    font-size: 40px !important;
+                }
+            }
+        }
+        h1 {
+            font-family: $secondaryFont;
+            font-size: 30px !important;
+            line-height: 0.75 !important;
+        }
+        .auR3 {
+            margin: auto !important;
         }
     }
 }
