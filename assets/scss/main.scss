@@ -15,6 +15,87 @@ $twitter: #1DA1F2;
 $instagram: #8a3ab9;
 $clear: none !important;
 
+/* SLICK.CSS */
+.slick-list,.slick-slider,.slick-track{
+    position:relative;
+}
+.slick-loading .slick-slide,.slick-loading .slick-track{
+    visibility:hidden
+}
+.slick-slider{
+    box-sizing:border-box;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    -webkit-touch-callout:none;
+    -khtml-user-select:none;
+    -ms-touch-action:pan-y;
+    touch-action:pan-y;
+    -webkit-tap-highlight-color:transparent;
+    margin-top: -15em;
+}
+.slick-list{
+    overflow:hidden;
+    margin:0;
+    padding:0
+}
+.slick-list:focus{
+    outline:0
+}
+.slick-list.dragging{
+    cursor:pointer;
+    cursor:hand
+}
+.slick-slider .slick-list,.slick-slider .slick-track{
+    -webkit-transform:translate3d(0,0,0);
+    -moz-transform:translate3d(0,0,0);
+    -ms-transform:translate3d(0,0,0);
+    -o-transform:translate3d(0,0,0);
+    transform:translate3d(0,0,0)
+}
+.slick-track{
+    top:0;
+    left:0
+}
+.slick-track:after,.slick-track:before{
+    display:table;
+    content:''
+}
+.slick-track:after{
+    clear:both
+}
+.slick-slide{
+    display:none;
+    float:left;
+    height:80%;
+    min-height:1px;
+    margin-bottom: -13em;
+}
+
+.slick-slide img{
+    display:block;
+}
+.slick-slide.slick-loading img{
+    display:none
+}
+.slick-slide.dragging img{
+    pointer-events:none
+}
+.slick-initialized .slick-slide{
+    display:flex;
+}
+.slick-vertical .slick-slide{
+    display:block;
+    height:auto;
+    border:1px solid transparent
+}
+.slick-arrow.slick-hidden{
+    display:none
+}
+/*# sourceMappingURL=slick.min.css.map */
+
+
 body {
     font-size: $mainSize;
     font-family: $mainFont !important;
@@ -322,6 +403,16 @@ main {
     .sectionThree {
         margin-top: 10em;
         margin-bottom: 5em;
+        .sideTitle {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 25%;
+            height: 10%;
+            hr {
+                margin-top: 1px;
+                border-bottom: solid 1px $black;
+            }
+        }
         img {
             min-height: 75vh;
             height: 100%;
@@ -391,6 +482,8 @@ main {
     }
         .sectionFour {
             margin-top: 10em;
+            padding-top: 8em;
+            padding-bottom: 8em;
             background: $cream;
             .auR1 {
                 position: relative;
@@ -398,10 +491,10 @@ main {
                 padding-bottom: 3em;
                 .workNameArea {
                     position: absolute;
-                    top: 50%;
-                    left: 10%;
-                    -webkit-transform: translateX(-50%);
-                    transform: translateX(-50%)
+                    top: 60%;
+                    left: 20%;
+                    -webkit-transform: translateX(-60%);
+                    transform: translateX(-60%)
                 }
             }
             .auR2 {
@@ -409,8 +502,9 @@ main {
             }
             .auR3 {
                 padding-bottom: 3em;
-                a {
-                    color: $black;
+                button {
+                    background: none;
+                    border: none;
                     text-decoration: none !important;
                     i {
                         font-size: 25px;
@@ -418,13 +512,9 @@ main {
                 }
             }
             img {
-                min-height: 75vh;
                 height: 100%;
                 width: 100%;
-                object-fit: cover;
-                -webkit-box-shadow: 0px 0px 74px -60px rgba(0,0,0,1);
-                -moz-box-shadow: 0px 0px 74px -60px rgba(0,0,0,1);
-                box-shadow: 0px 0px 74px -60px rgba(0,0,0,1);
+                object-fit: scale-down;
             }
             .title {
                 writing-mode: vertical-rl;
@@ -441,8 +531,81 @@ main {
                 }
             }
         }
+        .sectionFive {
+            margin-top: 10em;
+            .auR1 {
+                margin-top: -15em;
+                p {
+                    opacity: 0.8;
+                }
+                .auFc {
+                    border: 1px solid $tableBorder !important;
+                    border-radius: 0px;
+                    outline: none !important;
+                    box-shadow: none !important;
+                }
+                .btn-submit {
+                    border: solid 1px $black;
+                    text-transform: uppercase;
+                    font-family: $secondaryFont;
+                    font-weight: 600;
+                    background: $white;
+                    border-radius: 0px;
+                    color: $black;
+                    transition: 0.5s ease all;
+                    &:hover {
+                        background: $black;
+                        color: $white;
+                    }
+                }
+                textarea {
+                    resize: none;
+                    &::placeholder {
+                        padding: 5px 0px 0px 0px !important;
+                    }
+                }
+            }
+            .title {
+                writing-mode: vertical-rl;
+                text-orientation: mixed;
+                transform: rotate(180deg);
+                #num {
+                    opacity: 0.2;
+                    font-size: 60px;
+                }
+                h1 {
+                    font-family: $secondaryFont;
+                    font-size: 50px;
+                    line-height: 0.25;
+                }
+            }
+        }
 }
 
+footer {
+    margin-top: 10em;
+    background: $cream;
+    padding-top: 5em;
+    padding-bottom: 3em;
+    h1 {
+        font-family: $mainFont;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 0.10em;
+        font-weight: 600;
+        border-radius: 2px;
+    }
+    hr {
+        border-bottom: solid 1px $tableBorder;
+    }
+    a {
+        color: $black;
+        &:hover {
+            color:  black;
+            text-decoration: none;
+        }
+    }
+}
 
 @media only screen and (min-width: 768px) {
     main {
@@ -451,6 +614,19 @@ main {
 }
 
 @media only screen and (max-width: 767px) {
+    .slick-slider {
+        margin-top: -5em !important;
+    }
+    .slick-slide {
+        margin-bottom: auto !important;
+    }
+    .slick-slide img{
+        display:block;
+        height: 100% !important;
+        min-height: 75vh !important;
+        margin-top: -10em !important;
+        margin-bottom: -15em !important;
+    }
     main {
         .sectionOne {
             img {
@@ -506,6 +682,12 @@ main {
         }
     }
     .sectionThree {
+        .sideTitle {
+            position: relative !important;
+            top: auto !important;
+            height: auto !important;
+            margin-bottom: 2em;
+        }
         .title {
             transform: rotate(0deg) !important;
             writing-mode: inherit !important;
@@ -545,7 +727,8 @@ main {
     }
     .sectionFour {
         margin: auto !important;
-        padding-top: 1em;
+        padding-top: 1em !important;
+        padding-bottom: inherit !important;
         .auR1 {
             padding-top: 3em !important;
             margin: auto !important;
@@ -559,7 +742,9 @@ main {
                 transform: inherit !important;
                 text-align: center;
             }
-
+            img {
+                box-shadow: none !important;
+            }
         }
         .auR2 {
             padding: inherit !important;
@@ -580,6 +765,27 @@ main {
         }
         .auR3 {
             margin: auto !important;
+            padding-top: 2.5em;
+        }
+    }
+    .sectionFive {
+        margin-top: 10em !important;
+        .auR1 {
+            margin: auto !important;
+        }
+        .title {
+            transform: rotate(0deg) !important;
+            writing-mode: inherit !important;
+            text-orientation: inherit !important;
+            #num {
+                opacity: 0.2;
+                font-size: 40px !important;
+            }
+            h1 {
+                font-family: $secondaryFont;
+                font-size: 30px !important;
+                line-height: 0.75 !important;
+            }
         }
     }
 }

@@ -17,19 +17,19 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
     <meta name="copyright" content="arg0dev">
     <meta http-equiv="content-language" content="tr,en">
-    <link href='./assets/materials/opengraph/dx-favicon.png' rel='icon' type='image/x-icon' />
+    <link href='./assets/materials/opengraph/favicon.ico' rel='icon' type='image/x-icon' />
 
 
     <!-- arg0 OpenGraph tags -->
     <meta content='website' property='og:type' />
-    <meta content='Ayşen Urfalıoğlu | Your Title is Here' property='og:title' />
-    <meta content='Ayşen Urfalıoğlu | Your Title is Here' property='og:site_name' />
+    <meta content='Ayşen Urfalıoğlu | Kişisel İnternet Sayfası' property='og:title' />
+    <meta content='Ayşen Urfalıoğlu | Kişisel İnternet Sayfası' property='og:site_name' />
     <meta content='Your description is here' property='og:description' />
     <meta content='DOMAIN WILL IS HERE ENTER' property='og:url' />
     <meta content='OG IMAGE WILL IS HERE ENTER' property='og:image' />
-    <link href='./assets/materials/opengraph/dx-180.png' rel='apple-touch-icon' sizes='180x180' />
-    <link href='./assets/materials/opengraph/dx-192.png' rel='icon' sizes='192x192' type='image/png' />
-    <link href='./assets/materials/opengraph/dx-32.png' rel='icon' sizes='32x32' type='image/png' />
+    <link href='./assets/materials/opengraph/au-180.png' rel='apple-touch-icon' sizes='180x180' />
+    <link href='./assets/materials/opengraph/au-192.png' rel='icon' sizes='192x192' type='image/png' />
+    <link href='./assets/materials/opengraph/au-32.png' rel='icon' sizes='32x32' type='image/png' />
 
     <!-- arg0 CSS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -50,7 +50,7 @@
     <header id="HbgBlock">
         <nav class="navbar fixed-top auSh navbar-auW bg-auW" id="fixed">
             <div class="container p-0">
-                <a id="contrast" class="navbar-brand order-last m-0" href="#">Ayşen Urfalıoğlu</a>
+                <a id="contrast" class="navbar-brand order-last m-0" href="/index.html">Ayşen Urfalıoğlu</a>
                 <button class="navbar-toggler mb-auto mt-auto p-0" onclick="visited()" type="button">
                     <div class="auCont">
                         <div class="auB1"></div>
@@ -74,10 +74,10 @@
         <p class="text-center">Lorem ipsum dolor sit amet</p>
         <hr class="mb-5">
         <div class="mb-5">
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
+            <a href="#biography" onclick="closeSideNav()" duration="1000" easing="smooth" scrollTo="biography" class="scrollOnClick">Biography</a>
+            <a href="#exhibitions" onclick="closeSideNav()" duration="1000" easing="smooth" scrollTo="exhibitions" class="scrollOnClick">Exhibitions</a>
+            <a href="#works" onclick="closeSideNav()" duration="1000" easing="smooth" scrollTo="works" class="scrollOnClick">Works</a>
+            <a href="#contact" onclick="closeSideNav()" duration="1000" easing="smooth" scrollTo="contact" class="scrollOnClick">Contact</a>
         </div>
         <div id="auSideFooter" class="auSideFooter d-flex">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -102,16 +102,16 @@
                 </div>
                 <div class="col"></div>
                 <div class="col-md-6 mr-md-0 pr-md-0 mt-3 mt-md-0">
-                    <img src="/assets/materials/header.jpg">
+                    <img src="/assets/materials/images/header.jpg">
                 </div>
             </div>
         </div>
-
+        <div id="biography"></div>
         <div class="container-fluid sectionTwo">
             <div class="row">
                 <div class="col-1"></div>
                 <div class="col-md-4 order-last order-md-0 mt-3 mt-md-0">
-                    <img src="assets/materials/au_10027.jpg">
+                    <img src="assets/materials/images/au_10027.jpg">
                     <div class="recT"></div>
                     <div class="recTB"></div></img>
                 </div>
@@ -130,7 +130,7 @@
                 </div>
             </div>
         </div>
-
+        <div id="exhibitions"></div>
         <div class="container-fluid sectionThree">
             <div class="row">
                 <div class="col-1"></div>
@@ -168,18 +168,17 @@
                                 Jelly-o icing I love chupa chups gummies.</p>
                         </div>
                     </div>
-                    <a id="mobMore" class="d-flex justify-content-center justify-content-md-end" href="#">See More <i
+                    <a id="mobMore" class="d-flex justify-content-center justify-content-md-end" href="/exhibitions.html">See More <i
                             class="fas fa-long-arrow-alt-right ml-2 mt-1"></i></a>
                 </div>
                 <div class="col-1"></div>
                 <div class="col-md-4 mt-5">
-                    <img src="/assets/materials/au_10027.jpg" width="100%">
+                    <img src="/assets/materials/images/au_9999.jpg" width="100%">
                     <div class="recTB"></div>
                 </div>
             </div>
         </div>
-
-        <div class="container-fluid sectionFour">
+        <div class="container-fluid sectionFour" id="works">
             <div class="row auR2">
                 <div class="col-1"></div>
                 <div class="col-md-4"></div>
@@ -191,74 +190,145 @@
                     </div>
                 </div>
             </div>
-            <div class="row d-flex justify-content-center auR1">
-                <div class="col-md-5">
-                    <div class="workNameArea">
-                    <h1>Your Work Name</h1>
-                    <p>Cake gummi bears chupa chups caramels liquorice. Macaroon candy canes candy canes oat cake
-                        lollipop brownie lollipop I love gummi bears.</p>
+
+            <div class="ag-prod-slider arg0_swiper">
+                <div class="item">
+                    <div class="row d-flex justify-content-center auR1">
+                        <div class="col-md-5 ct-box">
+                            <div class="workNameArea">
+                                <h1>Your Work Name</h1>
+                                <p>Cake gummi bears chupa chups caramels liquorice. Macaroon candy canes candy canes oat
+                                    cake
+                                    lollipop brownie lollipop I love gummi bears.</p>
+                            </div>
+                            <img src="/assets/materials/images/au_10003.jpg">
+                        </div>
                     </div>
-                    <img src="/assets/materials/au_10027.jpg">
+                </div>
+
+                <div class="item">
+                    <div class="row d-flex justify-content-center auR1">
+                        <div class="col-md-5 ct-box">
+                            <div class="workNameArea">
+                                <h1>Your Work Name</h1>
+                                <p>Cake gummi bears chupa chups caramels liquorice. Macaroon candy canes candy canes oat
+                                    cake
+                                    lollipop brownie lollipop I love gummi bears.</p>
+                            </div>
+                            <img src="/assets/materials/images/au_10009.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="item">
+                    <div class="row d-flex justify-content-center auR1">
+                        <div class="col-md-5 ct-box">
+                            <div class="workNameArea">
+                                <h1>Your Work Name</h1>
+                                <p>Cake gummi bears chupa chups caramels liquorice. Macaroon candy canes candy canes oat
+                                    cake
+                                    lollipop brownie lollipop I love gummi bears.</p>
+                            </div>
+                            <img src="/assets/materials/images/au_10020.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="item">
+                    <div class="row d-flex justify-content-center auR1">
+                        <div class="col-md-5 ct-box">
+                            <div class="workNameArea">
+                                <h1>Your Work Name</h1>
+                                <p>Cake gummi bears chupa chups caramels liquorice. Macaroon candy canes candy canes oat
+                                    cake
+                                    lollipop brownie lollipop I love gummi bears.</p>
+                            </div>
+                            <img src="/assets/materials/images/au_10024.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="item">
+                    <div class="row d-flex justify-content-center auR1">
+                        <div class="col-md-5 ct-box">
+                            <div class="workNameArea">
+                                <h1>Your Work Name</h1>
+                                <p>Cake gummi bears chupa chups caramels liquorice. Macaroon candy canes candy canes oat
+                                    cake
+                                    lollipop brownie lollipop I love gummi bears.</p>
+                            </div>
+                            <img src="/assets/materials/images/au_10037.jpg">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row d-flex justify-content-center auR3">
+                <button id="arg0_swiper--prev" alt="Previous"><i class="fas fa-long-arrow-alt-left mr-5"></i></button>
+                <button id="arg0_swiper--next" alt="Next"><i class="fas fa-long-arrow-alt-right ml-5"></i></button>
+            </div>
+        </div>
+        <div id="contact"></div>
+        <div class="container-fluid sectionFive">
+            <div class="row">
+                <div class="col-1 d"></div>
+                <div class="col-md-3">
+                    <div class="title pl-0 pb-5 mr-0 text-left text-md-left">
+                        <h1 id="num">04/</h1>
+                        <h1>CONTACT</h1>
+                    </div>
                 </div>
             </div>
-            <div class="row d-flex justify-content-center auR3">
-                <a href="#"><i class="fas fa-long-arrow-alt-left mr-5"></i></a>
-                <a href="#"><i class="fas fa-long-arrow-alt-right ml-5"></i></a>
+            <div class="row d-flex justify-content-center auR1">
+                <div class="col-md-3">
+                    <p class="mb-5">Topping tootsie roll tiramisu gingerbread. Tootsie roll dragée pudding cotton candy
+                        sweet sugar plum chocolate. Chocolate bar tiramisu toffee apple pie jujubes.</p>
+                    <input type="name" class="form-control auFc" id="name" placeholder="Name & Surname">
+                    <input type="email" class="form-control auFc mt-3" id="email" placeholder="E-Mail Address">
+                    <input type="text" pattern="[0-9]+" minlength="11" maxlength="11" class="form-control auFc mt-3"
+                        id="phone" placeholder="Your Phone Number">
+                    <textarea maxlength="300" class="form-control auFc mt-3" id="message" rows="5"
+                        placeholder="Your Phone Number"></textarea>
+                    <button type="submit" class="btn btn-submit w-100 mt-3">Submit</button>
+                </div>
             </div>
         </div>
-
-        <div class="container">
-            <div class="col-md-12">
-                <h1>Lorem ipsum dolor sit amet</h1>
-                <p>Cupcake ipsum dolor sit amet candy. Pastry brownie cookie oat cake I love topping jelly. Pie danish
-                    cake. Donut chocolate pastry brownie croissant jujubes cake gummies. Soufflé fruitcake gingerbread.
-                    Icing carrot cake gummies I love. Sweet dessert croissant carrot cake danish liquorice pudding donut
-                    bear claw. Apple pie sweet roll cotton candy dessert biscuit jelly I love. Tiramisu tootsie roll
-                    cake gummies tart jujubes tiramisu gingerbread. Marzipan gingerbread bear claw topping I love.
-                    Soufflé caramels pie lollipop cotton candy. Chocolate marzipan fruitcake apple pie lemon drops.
-                    Chupa chups topping tiramisu candy powder carrot cake jelly-o. Topping jelly bonbon macaroon I love.
-
-                    Fruitcake bonbon sweet wafer sesame snaps I love. Jelly beans pie tootsie roll gingerbread candy
-                    canes dragée. Tiramisu I love candy muffin tart halvah. Cotton candy candy canes cake gummies bonbon
-                    ice cream topping jelly beans. Ice cream I love jujubes. Pudding toffee toffee apple pie. Oat cake I
-                    love tootsie roll oat cake biscuit chocolate I love chocolate cake cotton candy. Jelly donut danish
-                    I love wafer biscuit candy canes sugar plum candy. Wafer marshmallow apple pie pastry donut halvah
-                    fruitcake macaroon croissant. Oat cake tiramisu bear claw gummies. Cake gummi bears chupa chups
-                    caramels liquorice. Macaroon candy canes candy canes oat cake lollipop brownie lollipop I love gummi
-                    bears. I love chupa chups jelly soufflé danish gummi bears jujubes chupa chups. Gingerbread bear
-                    claw jelly pudding sweet I love.
-
-                    Gummi bears cookie halvah. Marzipan jelly-o cake soufflé powder I love. Candy canes cupcake I love
-                    tart I love donut. Pastry sugar plum oat cake tiramisu danish. Bear claw macaroon pie lemon drops
-                    cake jelly chocolate marshmallow donut. I love chupa chups tart croissant macaroon wafer. Danish
-                    cake bear claw tootsie roll caramels gummies. Toffee topping pastry halvah I love cupcake cheesecake
-                    lollipop. Marzipan I love tart lemon drops cotton candy candy oat cake. Tart sugar plum pastry
-                    soufflé. I love brownie dragée. Jelly-o icing I love chupa chups gummies. Marshmallow tart muffin
-                    liquorice topping liquorice soufflé. Tiramisu pie sweet I love I love brownie lemon drops chocolate.
-
-                    Macaroon marzipan chocolate cake tart. Icing tiramisu brownie tootsie roll. Tart chocolate cake I
-                    love jelly-o bonbon cotton candy chupa chups bonbon macaroon. Biscuit gummies toffee bear claw
-                    gummies liquorice danish cupcake. Topping cupcake gummies powder. Marzipan sugar plum jujubes
-                    chocolate cake bear claw macaroon. Fruitcake apple pie powder candy canes soufflé toffee lollipop
-                    marzipan ice cream. Gummi bears soufflé tootsie roll jelly carrot cake tootsie roll. Ice cream apple
-                    pie cake. Pudding soufflé gummi bears I love. Caramels biscuit jelly-o tart. Pastry wafer icing
-                    lollipop fruitcake marshmallow. Pudding I love chocolate.
-
-                    Marzipan icing donut topping jelly beans. Caramels jujubes jujubes dragée liquorice soufflé cupcake
-                    I love I love. Marshmallow toffee apple pie gummi bears donut. Carrot cake danish dragée sweet
-                    liquorice macaroon sweet tootsie roll. Sugar plum pudding cookie. I love donut muffin biscuit wafer
-                    sesame snaps dessert lemon drops. Jujubes marzipan I love apple pie jelly-o jelly beans. I love
-                    sugar plum I love gummi bears apple pie. Candy canes I love biscuit. Tiramisu sweet roll oat cake
-                    candy canes jelly-o cupcake. Brownie fruitcake marshmallow brownie I love biscuit dragée candy. I
-                    love chupa chups marzipan donut cake toffee jelly beans.</p>
-            </div>
-        </div>
-
     </main>
 
+    <footer>
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12 text-center">
+                    <h1>Ayşen Urfalıoğlu</h1>
+                    <div class="col-md-1 mt-4 mx-auto">
+                        <hr>
+                    </div>
+                    <div class="col-md-5 mx-auto mt-4">
+                        <p>Tart biscuit fruitcake icing tootsie roll toffee. Topping oat cake apple pie. Oat cake
+                            dessert muffin pastry. Sesame snaps toffee pie icing sugar plum gummi bears wafer. </p>
+                    </div>
+                    <div class="col-md-5 mx-auto mt-5 pt-3">
+                        <a href="#" target="blank_"><i class="fab fa-facebook-f mr-3"></i></a>
+                        <a href="#" target="blank_"><i class="fab fa-instagram mr-3"></i></a>
+                        <a href="#" target="blank_"><i class="fab fa-twitter mr-3"></i></a>
+                        <a href="#" target="blank_"><i class="fab fa-pinterest-p mr-3"></i></a>
+                        <a href="#" target="blank_"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                    <div class="col-md-5 mx-auto mt-5 pt-3">
+                        made with <i class="fas fa-heart mr-1"></i><a class="arg0dev" href="https://arg0.dev" target="blank_">arg0dev</a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- arg0 JS -->
     <script src="/assets/js/jquery-3.5.1.min.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
     <script src="/assets/js/main.js"></script>
 </body>
 
