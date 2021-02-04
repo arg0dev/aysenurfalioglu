@@ -68,9 +68,9 @@ $clear: none !important;
 .slick-slide{
     display:none;
     float:left;
-    height:80%;
+    height:50%;
     min-height:1px;
-    margin-bottom: -13em;
+    margin-top: 15em;
 }
 
 .slick-slide img{
@@ -130,11 +130,17 @@ header {
             letter-spacing: 0.10em;
             font-weight: 400;
             padding: 0px 5px 0px 8px;
-            color: $white;
-            background: $black;
+            color: $black;
             border-radius: 2px;
         }
     }
+}
+
+.lang {
+    font-weight: 600;
+    border-left: 1px solid $black;
+    padding-left: 1em;
+    opacity: 0.5;
 }
 
 .brandBg {
@@ -313,6 +319,16 @@ header {
 }
 
 main {
+    .forwarder {
+        font-weight: 500;
+        color: black;
+        text-decoration: none;
+        border-bottom: 1px solid $black;
+        &:hover {
+            color: black;
+            text-decoration: none !important;
+        }
+    }
     .sectionOne {
         h1 {
             font-family: $secondaryFont;
@@ -350,7 +366,6 @@ main {
         margin-bottom: 5em;
         img {
             min-height: 75vh;
-            height: 100%;
             width: 100%;
             object-fit: cover;
             -webkit-box-shadow: 0px 0px 74px -60px rgba(0,0,0,1);
@@ -415,7 +430,6 @@ main {
         }
         img {
             min-height: 75vh;
-            height: 100%;
             width: 100%;
             object-fit: cover;
             -webkit-box-shadow: 0px 0px 74px -60px rgba(0,0,0,1);
@@ -480,57 +494,58 @@ main {
             }
         }
     }
-        .sectionFour {
-            margin-top: 10em;
-            padding-top: 8em;
-            padding-bottom: 8em;
-            background: $cream;
-            .auR1 {
-                position: relative;
-                margin-top: -15em;
-                padding-bottom: 3em;
-                .workNameArea {
-                    position: absolute;
-                    top: 60%;
-                    left: 20%;
-                    -webkit-transform: translateX(-60%);
-                    transform: translateX(-60%)
-                }
+    .sectionFour {
+        margin-top: 10em;
+        background: $cream;
+        .auR1 {
+            position: relative;
+            margin-top: -15em;
+            padding-bottom: 3em;
+            .workNameArea {
+                position: absolute;
+                top: 60%;
+                left: 10%;
+                -webkit-transform: translateX(-60%);
+                transform: translateX(-60%)
             }
-            .auR2 {
-                padding-top: 10em;
-            }
-            .auR3 {
-                padding-bottom: 3em;
-                button {
-                    background: none;
-                    border: none;
-                    text-decoration: none !important;
-                    i {
-                        font-size: 25px;
-                    }
-                }
-            }
-            img {
-                height: 100%;
-                width: 100%;
-                object-fit: scale-down;
-            }
-            .title {
-                writing-mode: vertical-rl;
-                text-orientation: mixed;
-                margin-right: -1em !important;
-                #num {
-                    opacity: 0.2;
-                    font-size: 60px;
-                }
-                h1 {
-                    font-family: $secondaryFont;
-                    font-size: 50px;
-                    line-height: 0.25;
+        }
+        .auR2 {
+            padding-top: 10em;
+        }
+        .auR3 {
+            padding-bottom: 3em;
+            button {
+                color: $black;
+                text-decoration: none !important;
+                border: none;
+                background: none;
+                outline: none !important;
+                i {
+                    font-size: 25px;
                 }
             }
         }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: scale-down;
+        }
+        .title {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            margin-right: -1em !important;
+            #num {
+                opacity: 0.2;
+                font-size: 60px;
+            }
+            h1 {
+                font-family: $secondaryFont;
+                font-size: 50px;
+                line-height: 0.25;
+            }
+        }
+    }
         .sectionFive {
             margin-top: 10em;
             .auR1 {
@@ -613,19 +628,35 @@ footer {
     }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) and (orientation: landscape) {
     .slick-slider {
         margin-top: -5em !important;
     }
     .slick-slide {
-        margin-bottom: auto !important;
+        margin-bottom: 15em !important;
     }
     .slick-slide img{
         display:block;
         height: 100% !important;
         min-height: 75vh !important;
-        margin-top: -10em !important;
+        margin-top: 0em !important;
         margin-bottom: -15em !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .slick-slider {
+        margin-top: -5em ;
+    }
+    .slick-slide {
+        margin-bottom: auto ;
+    }
+    .slick-slide img{
+        display:block;
+        height: 100% ;
+        min-height: 75vh ;
+        margin-top: -10em ;
+        margin-bottom: -15em;
     }
     main {
         .sectionOne {
@@ -727,12 +758,9 @@ footer {
     }
     .sectionFour {
         margin: auto !important;
-        padding-top: 1em !important;
-        padding-bottom: inherit !important;
         .auR1 {
-            padding-top: 3em !important;
-            margin: auto !important;
-            padding-top: 15em !important;
+            padding-top: 5em !important;
+            margin: 0 !important;
             .workNameArea {
                 position: absolute !important;
                 margin: auto !important;
@@ -742,12 +770,10 @@ footer {
                 transform: inherit !important;
                 text-align: center;
             }
-            img {
-                box-shadow: none !important;
-            }
+
         }
         .auR2 {
-            padding: inherit !important;
+            padding-top: 5em !important;
             .title {
                 writing-mode: inherit !important;
                 text-orientation: inherit !important;
@@ -765,9 +791,9 @@ footer {
         }
         .auR3 {
             margin: auto !important;
-            padding-top: 2.5em;
         }
     }
+    
     .sectionFive {
         margin-top: 10em !important;
         .auR1 {
