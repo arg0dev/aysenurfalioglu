@@ -1,13 +1,8 @@
-/* SLICK.CSS */
-.slick-list, .slick-slider, .slick-track {
-  position: relative;
-}
-
-.slick-loading .slick-slide, .slick-loading .slick-track {
-  visibility: hidden;
-}
-
+/* Slider */
 .slick-slider {
+  margin-top: -10em;
+  position: relative;
+  display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-user-select: none;
@@ -19,17 +14,16 @@
   -ms-touch-action: pan-y;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
-  margin-top: -15em;
 }
 
 .slick-list {
+  position: relative;
+  display: block;
   overflow: hidden;
-  margin: 0;
-  padding: 0;
 }
 
 .slick-list:focus {
-  outline: 0;
+  outline: none;
 }
 
 .slick-list.dragging {
@@ -37,17 +31,23 @@
   cursor: hand;
 }
 
-.slick-slider .slick-list, .slick-slider .slick-track {
+.slick-slider .slick-track,
+.slick-slider .slick-list {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
 .slick-track {
+  position: relative;
   top: 0;
   left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.slick-track:after, .slick-track:before {
+.slick-track:before,
+.slick-track:after {
   display: table;
   content: '';
 }
@@ -56,16 +56,24 @@
   clear: both;
 }
 
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
 .slick-slide {
-  display: none;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
   float: left;
-  height: 50%;
-  min-height: 1px;
-  margin-top: 15em;
+}
+
+[dir='rtl'] .slick-slide {
+  float: right;
 }
 
 .slick-slide img {
   display: block;
+  height: 800px;
 }
 
 .slick-slide.slick-loading img {
@@ -77,23 +85,82 @@
 }
 
 .slick-initialized .slick-slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
 }
 
 .slick-vertical .slick-slide {
   display: block;
-  height: auto;
+  height: 100%;
   border: 1px solid transparent;
 }
 
 .slick-arrow.slick-hidden {
   display: none;
 }
+
 body {
   font-size: 16px;
-  font-family: "SF UI Display" !important;
+  font-family: "Theinhardt Pan" !important;
+  overflow-x: hidden;
+}
+
+body #chkS--One, body #chkS--Two, body #chkS--Three {
+  -webkit-transition: 0.1s ease-out;
+  transition: 0.1s ease-out;
+}
+
+body .bS--enabler {
+  -webkit-box-shadow: 0px 0px 74px -60px black;
+  box-shadow: 0px 0px 74px -60px black;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+body .recT--enabler {
+  opacity: 1 !important;
+}
+
+body .ltr::before {
+  top: 0;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  animation: slide 1s;
+  -webkit-animation: slide 1s;
+  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.79, 0.14, 0.15, 0.86);
+          animation-timing-function: cubic-bezier(0.79, 0.14, 0.15, 0.86);
+}
+
+@-webkit-keyframes slide {
+  from {
+    background: #fff;
+    left: 0%;
+  }
+  to {
+    background: #fff;
+    left: 150%;
+  }
+}
+
+@keyframes slide {
+  from {
+    background: #fff;
+    left: 0%;
+  }
+  to {
+    background: #fff;
+    left: 150%;
+  }
 }
 
 body .navbar-auW {
@@ -119,23 +186,36 @@ body .auLadder {
 }
 
 body h1 {
-  font-family: "Ivy Mode";
+  font-family: "Apercu Pro";
   font-weight: 700;
 }
 
+body p {
+  font-weight: 300;
+  opacity: 1 !important;
+  color: #000;
+}
+
 header .navbar .navbar-brand {
-  font-family: "SF UI Display";
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+  opacity: 1;
+  font-family: "Theinhardt Pan";
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 0.10em;
-  font-weight: 400;
+  font-weight: 300;
   padding: 0px 5px 0px 8px;
   color: #000;
   border-radius: 2px;
 }
 
+header .navbar .navbar-brand .hider {
+  display: none;
+}
+
 .lang {
-  font-weight: 600;
+  font-weight: 300;
   border-left: 1px solid #000;
   padding-left: 1em;
   opacity: 0.5;
@@ -177,7 +257,7 @@ header .navbar .navbar-brand {
 }
 
 .auSideNav h2 {
-  font-family: "Ivy Mode";
+  font-family: "Apercu Pro";
   padding: 8px 8px 16px 5px;
   font-weight: 600;
   text-transform: capitalize;
@@ -200,7 +280,7 @@ header .navbar .navbar-brand {
   padding: 8px 8px 16px 5px;
   text-decoration: none;
   font-size: 14px;
-  font-family: "SF UI Display";
+  font-family: "Theinhardt Pan";
   text-transform: uppercase;
   color: #fff !important;
   display: block;
@@ -336,16 +416,39 @@ main .forwarder:hover {
   text-decoration: none !important;
 }
 
+main .sectionOne .col-md-6 {
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 main .sectionOne h1 {
-  font-family: "Ivy Mode";
+  font-family: "Apercu Pro";
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 72px;
+  font-size: 56px;
 }
 
 main .sectionOne h2 {
-  font-family: "SF UI Display";
-  font-weight: 200;
+  font-family: "Theinhardt Pan";
+  font-weight: 300;
   line-height: 0.25em;
 }
 
@@ -364,7 +467,7 @@ main .sectionOne span {
   -webkit-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
   position: absolute;
-  margin-top: 3em;
+  margin-top: 5em;
   margin-left: -35px;
   padding-left: 0;
 }
@@ -384,8 +487,10 @@ main .sectionTwo img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-box-shadow: 0px 0px 74px -60px black;
-  box-shadow: 0px 0px 74px -60px black;
+  -webkit-box-shadow: 0px 0px 74px -60px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 74px -60px rgba(0, 0, 0, 0);
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
 }
 
 main .sectionTwo .recT {
@@ -398,6 +503,9 @@ main .sectionTwo .recT {
   z-index: -999;
   top: 25px;
   right: -10px;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+  opacity: 0;
 }
 
 main .sectionTwo .recTB {
@@ -426,7 +534,7 @@ main .sectionTwo .title #num {
 }
 
 main .sectionTwo .title h1 {
-  font-family: "Ivy Mode";
+  font-family: "Apercu Pro";
   font-size: 50px;
   line-height: 0.25;
 }
@@ -459,8 +567,6 @@ main .sectionThree img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-box-shadow: 0px 0px 74px -60px black;
-  box-shadow: 0px 0px 74px -60px black;
 }
 
 main .sectionThree .recTB {
@@ -490,7 +596,7 @@ main .sectionThree .title #num {
 }
 
 main .sectionThree .title h1 {
-  font-family: "Ivy Mode";
+  font-family: "Apercu Pro";
   font-size: 50px;
   line-height: 0.25;
 }
@@ -510,10 +616,14 @@ main .sectionThree a:hover {
   text-decoration: none !important;
 }
 
+main .sectionThree .textAreaBox .c1 {
+  max-width: 100px;
+}
+
 main .sectionThree .textAreaBox h3 {
   background: #fff;
   position: relative;
-  max-width: 220px;
+  max-width: 150px;
   font-size: 25px;
   font-weight: 700;
   text-align: center;
@@ -538,7 +648,6 @@ main .sectionFour {
 
 main .sectionFour .auR1 {
   position: relative;
-  margin-top: -15em;
   padding-bottom: 3em;
 }
 
@@ -550,12 +659,17 @@ main .sectionFour .auR1 .workNameArea {
   transform: translateX(-60%);
 }
 
+main .sectionFour .auR1 .workNameArea #date {
+  width: 100%;
+  opacity: 0.7 !important;
+}
+
 main .sectionFour .auR2 {
-  padding-top: 10em;
+  padding-top: 12em;
 }
 
 main .sectionFour .auR3 {
-  padding-bottom: 3em;
+  padding-bottom: 8em;
 }
 
 main .sectionFour .auR3 button {
@@ -571,7 +685,6 @@ main .sectionFour .auR3 button i {
 }
 
 main .sectionFour img {
-  height: 100%;
   width: 100%;
   -o-object-fit: scale-down;
      object-fit: scale-down;
@@ -591,7 +704,7 @@ main .sectionFour .title #num {
 }
 
 main .sectionFour .title h1 {
-  font-family: "Ivy Mode";
+  font-family: "Apercu Pro";
   font-size: 50px;
   line-height: 0.25;
 }
@@ -619,7 +732,7 @@ main .sectionFive .auR1 .auFc {
 main .sectionFive .auR1 .btn-submit {
   border: solid 1px #000;
   text-transform: uppercase;
-  font-family: "Ivy Mode";
+  font-family: "Apercu Pro";
   font-weight: 600;
   background: #fff;
   border-radius: 0px;
@@ -668,9 +781,54 @@ main .sectionFive .title #num {
 }
 
 main .sectionFive .title h1 {
-  font-family: "Ivy Mode";
+  font-family: "Apercu Pro";
   font-size: 50px;
   line-height: 0.25;
+}
+
+.scrollTop {
+  z-index: 999;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  position: fixed;
+  bottom: 50px;
+  right: 35px;
+  border-radius: 100%;
+  -webkit-animation: glow 5s infinite;
+          animation: glow 5s infinite;
+}
+
+@-webkit-keyframes glow {
+  from {
+    -webkit-box-shadow: 0 0 0px -10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 0px -10px rgba(0, 0, 0, 0.5);
+  }
+  to {
+    -webkit-box-shadow: 0 0 0px 20px rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0px 20px rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes glow {
+  from {
+    -webkit-box-shadow: 0 0 0px -10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 0px -10px rgba(0, 0, 0, 0.5);
+  }
+  to {
+    -webkit-box-shadow: 0 0 0px 20px rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0px 20px rgba(0, 0, 0, 0);
+  }
+}
+
+.scrollTop button {
+  background: #000;
+  border: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  color: #fff;
+  -webkit-box-shadow: 10px 10px 50px -20px rgba(0, 0, 0, 0.35);
+  box-shadow: 10px 10px 50px -20px rgba(0, 0, 0, 0.35);
 }
 
 footer {
@@ -681,7 +839,7 @@ footer {
 }
 
 footer h1 {
-  font-family: "SF UI Display";
+  font-family: "Theinhardt Pan";
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 0.10em;
@@ -708,41 +866,18 @@ footer a:hover {
   }
 }
 
-@media only screen and (max-width: 767px) and (orientation: landscape) {
-  .slick-slider {
-    margin-top: -5em !important;
-  }
-  .slick-slide {
-    margin-bottom: 15em !important;
-  }
-  .slick-slide img {
-    display: block;
-    height: 100% !important;
-    min-height: 75vh !important;
-    margin-top: 0em !important;
-    margin-bottom: -15em !important;
-  }
-}
-
 @media only screen and (max-width: 767px) {
   .slick-slider {
-    margin-top: -5em;
-  }
-  .slick-slide {
-    margin-bottom: auto;
+    margin: auto;
   }
   .slick-slide img {
     display: block;
-    height: 100%;
-    min-height: 75vh;
-    margin-top: -10em;
-    margin-bottom: -15em;
+    height: auto;
   }
   main .sectionOne img {
     width: 100% !important;
     height: 50vh;
     min-height: auto !important;
-    margin-top: 1em;
   }
   main .sectionOne h1 {
     font-size: 40px !important;
@@ -766,7 +901,7 @@ footer a:hover {
             transform: rotate(90deg) !important;
   }
   main .sectionTwo {
-    margin-top: 2em !important;
+    margin-top: 5em !important;
   }
   main .sectionTwo img {
     height: 50vh !important;
@@ -789,7 +924,7 @@ footer a:hover {
     font-size: 40px !important;
   }
   main .sectionTwo .title h1 {
-    font-family: "Ivy Mode";
+    font-family: "Apercu Pro";
     font-size: 30px !important;
     line-height: 0.75;
   }
@@ -812,7 +947,7 @@ footer a:hover {
     font-size: 40px !important;
   }
   .sectionThree .title h1 {
-    font-family: "Ivy Mode";
+    font-family: "Apercu Pro";
     font-size: 30px !important;
     line-height: 0.75 !important;
   }
@@ -839,21 +974,16 @@ footer a:hover {
     background: #000;
     color: #fff;
   }
-  .sectionFour {
-    margin: auto !important;
-  }
   .sectionFour .auR1 {
-    padding-top: 5em !important;
-    margin: 0 !important;
+    margin-top: 2em;
   }
   .sectionFour .auR1 .workNameArea {
-    position: absolute !important;
-    margin: auto !important;
-    top: -180px !important;
-    left: 0 !important;
-    -webkit-transform: inherit !important;
-    transform: inherit !important;
-    text-align: center;
+    position: relative !important;
+    top: initial !important;
+    left: initial !important;
+    -webkit-transform: initial !important;
+            transform: initial !important;
+    margin-bottom: 2em;
   }
   .sectionFour .auR2 {
     padding-top: 5em !important;
@@ -870,15 +1000,16 @@ footer a:hover {
     font-size: 40px !important;
   }
   .sectionFour h1 {
-    font-family: "Ivy Mode";
+    font-family: "Apercu Pro";
     font-size: 30px !important;
     line-height: 0.75 !important;
   }
   .sectionFour .auR3 {
     margin: auto !important;
+    padding-bottom: 3em !important;
   }
   .sectionFive {
-    margin-top: 10em !important;
+    margin-top: 7em !important;
   }
   .sectionFive .auR1 {
     margin: auto !important;
@@ -896,7 +1027,7 @@ footer a:hover {
     font-size: 40px !important;
   }
   .sectionFive .title h1 {
-    font-family: "Ivy Mode";
+    font-family: "Apercu Pro";
     font-size: 30px !important;
     line-height: 0.75 !important;
   }
