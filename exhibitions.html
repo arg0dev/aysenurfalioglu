@@ -8,8 +8,9 @@
     <!-- arg0 meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <meta name="description" content="Your description is here">
-    <meta name="author" content="Barış Albayrak">
+    <meta name="description"
+        content="Ayşen Urfaloğlu'nun sanatsal tavrı ile ilgili örnekler sunduğu bu platformda, izlenebilecek olan işleri; yerleştirme, resim, heykel, video, fotoğraf ve zaman zaman yanınlanan ve genellikle sergileri ile ilgili metinlerden oluşmaktadır.">
+    <meta name="author" content="Ayşen Urfalıoğlu">
     <meta name="theme-color" content="#000000">
     <meta name="msapplication-navbutton-color" content="#000000">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -24,8 +25,10 @@
     <meta content='website' property='og:type' />
     <meta content='Ayşen Urfalıoğlu | Kişisel İnternet Sayfası' property='og:title' />
     <meta content='Ayşen Urfalıoğlu | Kişisel İnternet Sayfası' property='og:site_name' />
-    <meta content='Your description is here' property='og:description' />
-    <meta content='DOMAIN WILL IS HERE ENTER' property='og:url' />
+    <meta
+        content="Ayşen Urfaloğlu'nun sanatsal tavrı ile ilgili örnekler sunduğu bu platformda, izlenebilecek olan işleri; yerleştirme, resim, heykel, video, fotoğraf ve zaman zaman yanınlanan ve genellikle sergileri ile ilgili metinlerden oluşmaktadır."
+        property='og:description' />
+    <meta content='http://aysenurfalioglu.art/' property='og:url' />
     <meta content='OG IMAGE WILL IS HERE ENTER' property='og:image' />
     <link href='./assets/materials/opengraph/au-180.png' rel='apple-touch-icon' sizes='180x180' />
     <link href='./assets/materials/opengraph/au-192.png' rel='icon' sizes='192x192' type='image/png' />
@@ -36,23 +39,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
-    <link href="/assets/font/IvyMode/IvyMode.css" rel="stylesheet" type="text/css" />
-    <link href="/assets/font/SFUIDisplay/SFUIDisplay.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="./assets/scss/main.css" />
+    <link href="./assets/font/IvyMode/IvyMode.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/font/SFUIDisplay/SFUIDisplay.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/font/TheinhardtPan/theinHardt.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/font/ApercuPro/apercuPro.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../assets/scss/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
-    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
+    
 </head>
 
 <body id="disP">
     <header id="HbgBlock">
         <nav class="navbar fixed-top auSh navbar-auW bg-auW" id="fixed">
-            <div class="container p-0">
-                <a id="contrast" class="navbar-brand order-last ml-0 ml-md-auto mr-0 mr-md-2 mt-0 mb-0"
-                    href="/index.html">Ayşen Urfalıoğlu</a>
-                <a class="lang order-last m-0 pt-0 mt-0" href="#">EN</a>
+            <div class="container-fluid col col-md-10 p-0">
                 <button class="navbar-toggler mb-auto mt-auto p-0" onclick="visited()" type="button">
                     <div class="auCont">
                         <div class="auB1"></div>
@@ -60,6 +62,10 @@
                         <div class="auB3"></div>
                     </div>
                 </button>
+                <a lang="en" id="contrast" class="navbar-brand m-0" href="/index.html">
+                    <span id="triggerBrand" style="font-weight: 500;">Ayşen Urfalıoğlu</span> <span id="auH">// <span
+                            style="font-style: italic;">Visual Arts</span></span></a>
+                <a class="lang m-0 pt-0 mt-0" href="#">EN</a>
             </div>
         </nav>
     </header>
@@ -72,17 +78,18 @@
                 <div class="auB3"></div>
             </div>
         </button>
-        <h2 class="text-center">Ayşen Urfalıoğlu</h2>
+        <h2 class="text-center">Ayşen Urfalıoğlu <span lang="en">// Visual Arts</span></h2>
+        <hr class="mb-1 mt-0">
         <p class="text-center p-3">Canlı olmanın doğası gereği süreç bağlanmalar ve ayrılmalardan ibarettir.</p>
-        <hr class="mb-5">
+        
         <div class="mb-5">
-            <a href="index.html#biography" onclick="closeSideNav()" duration="1000" easing="smooth" scrollTo="biography"
+            <a href="#biography" onclick="closeSideNav()" duration="1000" easing="smooth" scrollTo="biography"
                 class="scrollOnClick">Biyografi</a>
-            <a href="index.html#exhibitions" onclick="closeSideNav()" duration="1000" easing="smooth"
-                scrollTo="exhibitions" class="scrollOnClick">Metinler</a>
-            <a href="index.html#works" onclick="closeSideNav()" duration="1000" easing="smooth" scrollTo="works"
+            <a href="#exhibitions" onclick="closeSideNav()" duration="1000" easing="smooth" scrollTo="exhibitions"
+                class="scrollOnClick">Metinler</a>
+            <a href="#works" onclick="closeSideNav()" duration="1000" easing="smooth" scrollTo="works"
                 class="scrollOnClick">İşler</a>
-            <a href="index.html#contact" onclick="closeSideNav()" duration="1000" easing="smooth" scrollTo="contact"
+            <a href="#contact" onclick="closeSideNav()" duration="1000" easing="smooth" scrollTo="contact"
                 class="scrollOnClick">İletişim</a>
         </div>
         <div id="auSideFooter" class="auSideFooter d-flex">
@@ -103,7 +110,16 @@
                     <div class="col-3 p-0 m-0">
                         <hr>
                     </div>
-                    <p>Kalbimden geçmeyen hiçbir şeyi yeterince yaratıcı bulmuyorum.</p>
+                    <p><i class="fas fa-sort-amount-down-alt mr-2"></i>Şuraya git:</p>
+                    <div id="filter" class="d-flex justify-content-baseline">
+                        <a href="#attachment" duration="1000" easing="smooth" scrollTo="attachment"
+                        class="scrollOnClick"><button type="button" class="mr-2">Bağlanma</button></a>
+                        <a href="#feel" duration="1000" easing="smooth" scrollTo="feel"
+                        class="scrollOnClick"><button type="button" class="mr-2">Duyu</button></a>
+                        <a href="#creator" duration="1000" easing="smooth" scrollTo="creator"
+                        class="scrollOnClick"><button type="button" class="mr-2">Yaratıcı</button></a>
+                    </div>
+
                 </div>
                 <div class="col-md-5" id="attachment">
                     <div class="textAreaBox mt-md-5">
@@ -161,7 +177,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="textAreaBox mt-5 mb-3 pb-3">
+                    <div class="textAreaBox mt-5 mb-3 pb-3" id="feel">
                         <h3 class="c1">Duyu</h3>
                         <div class="taBorder">
                             <p>Her canlı duyumları tarafından alınıp işlenen bir bilgi ağının tamamından oluşan bir
@@ -212,7 +228,7 @@
                         </div>
                     </div>
 
-                    <div class="textAreaBox mt-5 mb-3 pb-3">
+                    <div class="textAreaBox mt-5 mb-3 pb-3" id="creator">
                         <h3>Yaratıcı</h3>
                         <div class="taBorder">
                             <p>Bilgiden yola çıkarak mı duyguya ulaşıyorum yoksa duygular mı beni bilgiye götürüyor tam
@@ -247,17 +263,26 @@
         </div>
     </main>
 
+    <div id="scrollBtn" class="scrollTop">
+        <div class="container">
+            <div class="row">
+                <a href="#" duration="1000" easing="smooth" scrollTo="disP"
+                class="scrollOnClick"><button><i class="fas fa-chevron-up"></i></button></a>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="container-fluid">
             <div class="row d-flex justify-content-center">
                 <div class="col-md-12 text-center">
-                    <h1>Ayşen Urfalıoğlu</h1>
+                    <h1 lang="en"><span style="font-weight: 500;">Ayşen Urfalıoğlu</span> <span>// <span
+                        style="font-style: italic;">Visual Arts</span></span></a></h1>
                     <div class="col-md-1 mt-4 mx-auto">
                         <hr>
                     </div>
                     <div class="col-md-5 mx-auto mt-4">
-                        <p>Bütün kendini oluşturan parçaların toplamından farklıdır.
-                            - Gestalt Psikolojisi</p>
+                        <p>Bütün kendini oluşturan parçaların toplamından farklıdır. <br /> - Gestalt Psikolojisi </p>
                     </div>
                     <div class="col-md-5 mx-auto mt-5 pt-3">
                         <a href="#" target="blank_"><i class="fab fa-facebook-f mr-3"></i></a>

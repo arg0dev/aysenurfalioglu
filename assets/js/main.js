@@ -19,8 +19,6 @@ var chkSOne = document.getElementById('chkS--One');
 var chkSTwo = document.getElementById('chkS--Two');
 var chkSThree = document.getElementById('chkS--Three');
 var bSChk = document.getElementById('bS--Chk');
-chkSTwo.style.opacity = "0";
-chkSThree.style.opacity = "0";
 triggerBrand.innerHTML = triggerBrandDef;
 
 

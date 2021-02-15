@@ -264,16 +264,22 @@ header {
     -moz-box-shadow: 3px 0px 35px -20px rgba(0,0,0,0.75);
     box-shadow: 3px 0px 35px -20px rgba(0,0,0,0.75);
     h2 {
-        font-family: $secondaryFont;
+        font-family: $mainFont;
         padding: 8px 8px 16px 5px;
-        font-weight: 600;
-        text-transform: capitalize;
+        font-weight: 500;
+        font-size: 20px;
+        text-transform: uppercase;
         color: $white !important;
         line-height: 0.5;
+        span {
+            font-weight: 300;
+            font-style: italic;
+        }
     }
     p {
         color: $white;
-        opacity: 0.5;
+        opacity: 0.5     !important;
+        font-size: 16px;
     }
     hr {
         width: 15%;
@@ -448,6 +454,11 @@ main {
             object-fit: cover;
         }
         span {
+            opacity: 0.3;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;   
             font-weight: 500;
             transform: rotate(90deg) !important;
             transform: translate(0px, 0px);
@@ -477,7 +488,6 @@ main {
             border: solid 1px $tableBorder !important;
             min-height: 75vh;
             height: 100%;
-            width: 100%;
             width: 85%;
             position: absolute;
             z-index: -999;
@@ -521,6 +531,21 @@ main {
     .sectionThree {
         margin-top: 10em;
         margin-bottom: 5em;
+        #filter {
+            button {
+                background: transparent;
+                border: 1px solid $tableBorder;
+                font-weight: 400;
+                color: $black;
+                padding: 0.25em 0.50em 0.25em 0.50em;
+                transition: all 0.2s ease-in-out;
+                &:hover {
+                    background: $black;
+                    color: $white;
+                    border: solid 1px $black;
+                }
+            }
+        }
         .sideTitle {
             position: -webkit-sticky;
             position: sticky;
@@ -565,6 +590,9 @@ main {
             margin-top: 2em;
             text-align: justify;
             opacity: 0.8;
+            i {
+                opacity: 0.5;
+            }
         }
             a {
                 color: $black;

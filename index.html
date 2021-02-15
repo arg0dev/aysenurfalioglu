@@ -48,13 +48,16 @@
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
+
+    <!-- reCaptcha 3 -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     
 </head>
 
 <body id="disP">
     <header id="HbgBlock">
         <nav class="navbar fixed-top auSh navbar-auW bg-auW" id="fixed">
-            <div class="container-fluid p-0">
+            <div class="container-fluid col col-md-10 p-0">
                 <button class="navbar-toggler mb-auto mt-auto p-0" onclick="visited()" type="button">
                     <div class="auCont">
                         <div class="auB1"></div>
@@ -78,9 +81,10 @@
                 <div class="auB3"></div>
             </div>
         </button>
-        <h2 class="text-center">Ayşen Urfalıoğlu</h2>
+        <h2 class="text-center">Ayşen Urfalıoğlu <span lang="en">// Visual Arts</span></h2>
+        <hr class="mb-1 mt-0">
         <p class="text-center p-3">Canlı olmanın doğası gereği süreç bağlanmalar ve ayrılmalardan ibarettir.</p>
-        <hr class="mb-5">
+        
         <div class="mb-5">
             <a href="#biography" onclick="closeSideNav()" duration="1000" easing="smooth" scrollTo="biography"
                 class="scrollOnClick">Biyografi</a>
@@ -256,6 +260,11 @@
                         id="phone" placeholder="Telefon Numarası">
                     <textarea maxlength="300" class="form-control auFc mt-3" id="message" rows="5"
                         placeholder="Mesajınız"></textarea>
+                        <div class="form-group mt-3">
+                            <div class="g-recaptcha" data-sitekey="6LcpdFgaAAAAAHrq14PnK1AHae3mMWRlknRHF_sk" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+                            <input class="form-control d-none" data-recaptcha="true" required data-error="Please complete the Captcha">
+                            <div class="help-block with-errors"></div>
+                        </div>
                     <button type="submit" class="btn btn-submit w-100 mt-3">Gönder</button>
                 </div>
             </div>
