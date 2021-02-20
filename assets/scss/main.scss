@@ -253,13 +253,13 @@ header {
     max-width: 100%;
     opacity: 0;
     position: fixed;
+    position: -webkit-fixed;
     z-index: 9999;
     top: 0;
-    left: -100%;
+    left: -150%;
     background-color: $black;
     overflow-x: hidden;
     transition: 0.7s all ease-in-out;
-    padding-top: 18px;
     -webkit-box-shadow: 3px 0px 35px -20px rgba(0,0,0,0.75);
     -moz-box-shadow: 3px 0px 35px -20px rgba(0,0,0,0.75);
     box-shadow: 3px 0px 35px -20px rgba(0,0,0,0.75);
@@ -272,6 +272,7 @@ header {
         color: $white !important;
         line-height: 0.5;
         span {
+            line-height: 1em;
             font-weight: 300;
             font-style: italic;
         }
@@ -304,11 +305,11 @@ header {
         }
     }
     .auSideFooter {
-        border-top: 1px solid $border;
-        background: $sideNav;
-        top: 100%;
+        border-top: solid 1px $border;
         position: sticky;
-    
+        position: -webkit-sticky;
+        top: 100%;
+        background: $sideNav;
         a {
             margin-left: auto;
             margin-right: auto;

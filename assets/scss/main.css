@@ -244,14 +244,14 @@ header .navbar .navbar-brand .hider {
   max-width: 100%;
   opacity: 0;
   position: fixed;
+  position: -webkit-fixed;
   z-index: 9999;
   top: 0;
-  left: -100%;
+  left: -150%;
   background-color: #000;
   overflow-x: hidden;
   -webkit-transition: 0.7s all ease-in-out;
   transition: 0.7s all ease-in-out;
-  padding-top: 18px;
   -webkit-box-shadow: 3px 0px 35px -20px rgba(0, 0, 0, 0.75);
   box-shadow: 3px 0px 35px -20px rgba(0, 0, 0, 0.75);
 }
@@ -267,6 +267,7 @@ header .navbar .navbar-brand .hider {
 }
 
 .auSideNav h2 span {
+  line-height: 1em;
   font-weight: 300;
   font-style: italic;
 }
@@ -304,11 +305,11 @@ header .navbar .navbar-brand .hider {
 }
 
 .auSideNav .auSideFooter {
-  border-top: 1px solid #1a1a1a;
-  background: #0a0a0a46;
-  top: 100%;
-  position: -webkit-sticky;
+  border-top: solid 1px #1a1a1a;
   position: sticky;
+  position: -webkit-sticky;
+  top: 100%;
+  background: #0a0a0a46;
 }
 
 .auSideNav .auSideFooter a {
