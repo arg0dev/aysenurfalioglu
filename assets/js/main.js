@@ -135,12 +135,21 @@ function visited() {
     setTimeout(function () {
         closeX.style.opacity = "1";
         fixed.classList.add('brandBg');
+        scrollBtn.style.opacity = "0";
+        scrollBtn.style.visibility = "hidden";
     }, 400);
     auSideNav.style.opacity = "1";
     auSideNav.style.left = "0";
 }
 
 function closeSideNav() {
+        if (document.body.scrollTop > 100) {
+            scrollBtn.style.opacity = "1";
+            scrollBtn.style.visibility = "visible";
+        } else {
+
+        }
+
     setTimeout(function () {
         closeX.style = closeXReset;
     }, 100);
