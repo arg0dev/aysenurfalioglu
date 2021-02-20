@@ -349,6 +349,7 @@ header .navbar .navbar-brand .hider {
 
 .auSideNav .change {
   margin-top: -5px;
+  padding-top: 18px;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   opacity: 0;
