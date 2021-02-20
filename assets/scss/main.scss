@@ -732,6 +732,8 @@ main {
 
 .scrollTop {
     z-index: 999;
+    opacity: 0;
+    visibility: hidden;
     transition: 0.5s all ease;
     position: fixed;
     bottom: 50px;

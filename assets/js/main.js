@@ -32,52 +32,74 @@ var SIF2 = setInterval(function () {
 }, 3000);
 
 var SIF3 = setInterval(function () {
+    navbarBrand.style.opacity = "0";
+}, 4500);
+
+var SIF4 = setInterval(function () {
+    navbarBrand.style.opacity = "1";
     triggerBrand.innerHTML = triggerBrandDef;
 }, 6000);
 
 clearInterval(SIF1);
 clearInterval(SIF2);
 clearInterval(SIF3);
+clearInterval(SIF4);
 
 let mQuAu = window.matchMedia("(max-width: 767px)");
 matchMediaQuery(mQuAu)
 mQuAu.addListener(matchMediaQuery)
 
 function matchMediaQuery(mQuAu) {
-    if (mQuAu.matches) {
-        auH.classList.add('hider');
-        SIF1 = setInterval(function () {
-            navbarBrand.style.opacity = "0";
-        }, 1500);
+    repatTrigger();
+    function repatTrigger() {
+        if (mQuAu.matches) {
+            auH.classList.add('hider');
+            SIF1 = setTimeout(function () {
+                navbarBrand.style.opacity = "0";
+                console.log('test1');
+            }, 1500);
+    
+            SIF2 = setTimeout(function () {
+                triggerBrand.innerHTML = "// VISUAL ARTS";
+                navbarBrand.style.opacity = "1";
+                console.log('test2');
+            }, 3000);
 
-        SIF2 = setInterval(function () {
-            triggerBrand.innerHTML = "// VISUAL ARTS";
-            navbarBrand.style.opacity = "1";
-        }, 3000);
-
-        SIF3 = setInterval(function () {
+            SIF3 = setTimeout(function () {
+                navbarBrand.style.opacity = "0";
+                console.log('test3');
+            }, 4500);
+    
+            SIF4 = setTimeout(function () {
+                navbarBrand.style.opacity = "1";
+                triggerBrand.innerHTML = triggerBrandDef;
+                console.log('test4');
+                repatTrigger();
+            }, 6000);
+        }
+        else {
+            auH.classList.remove('hider');
+            clearInterval(SIF1);
+            clearInterval(SIF2);
+            clearInterval(SIF3);
+            clearInterval(SIF4);
             triggerBrand.innerHTML = triggerBrandDef;
-        }, 6000);
+            navbarBrand.style.opacity = "1";
+        }
+    }
 
-    }
-    else {
-        auH.classList.remove('hider');
-        clearInterval(SIF1);
-        clearInterval(SIF2);
-        clearInterval(SIF3);
-        triggerBrand.innerHTML = triggerBrandDef;
-        navbarBrand.style.opacity = "1";
-    }
 }
 
 window.addEventListener('scroll', function () {
     if (document.body.scrollTop > 100) {
         fixed.classList.add('fade-in');
         scrollBtn.style.opacity = "1";
+        scrollBtn.style.visibility = "visible";
 
     } else {
         fixed.classList.remove('fade-in');
         scrollBtn.style.opacity = "0";
+        scrollBtn.style.visibility = "hidden";
     }
     if (document.body.scrollTop > 500) {
         chkSTwo.classList.add('ltr');
